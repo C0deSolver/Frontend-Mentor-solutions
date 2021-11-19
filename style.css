@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  font-size: 15px;
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* DEFAULTS */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Very-light-gray);
+  color: var(--Transparent-white);
+  height: 100%;
+}
+
+/* STATS CARD */
+
+main {
+  max-width: 830px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding: 5% 5%;
+  height: 470px;
+}
+
+.card-icon,
+.card h1,
+.card p {
+  margin-bottom: 25px;
+}
+
+.card h1 {
+  font-family: "Lexend Deka", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+
+.text {
+  height: 60%;
+}
+
+.card p {
+  font-family: "Big Shoulder Display", sans-serif;
+  font-weight: 400;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+#sedans-card {
+  background-color: var(--Bright-orange);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+#suvs-card {
+  background-color: var(--Dark-cyan);
+}
+
+#luxury-card {
+  background-color: var(--Very-dark-cyan);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+button {
+  font-family: "Big Shoulder Display", sans-serif;
+  padding: 10px 20px;
+  background-color: var(--Very-light-gray);
+  border: none;
+  border-radius: 100px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+#sedans-button {
+  color: var(--Bright-orange);
+}
+
+#suvs-button {
+  color: var(--Dark-cyan);
+}
+
+#luxury-button {
+  color: var(--Very-dark-cyan);
+}
+
+.attribution {
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 543px) {
+  main {
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 300px;
+  }
+
+  .card {
+    padding: 15%;
+  }
+
+  .card p {
+    margin-bottom: 10%;
+  }
+
+  #sedans-card {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 6px;
+  }
+
+  #luxury-card {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 6px;
+  }
+}
